@@ -1,0 +1,96 @@
+h1 {
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.tbl-header {
+    height: auto;
+    overflow-x: auto;
+    margin-top: 0px;
+    border: 3px solid #3b99e0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: 0px;
+    /* background-image: linear-gradient(
+45deg, #f4c9f4, #60196b); */
+    background: white;
+}
+
+.tbl-content {
+    height: auto;
+    overflow-x: auto;
+    margin-top: 0px;
+    border: 3px solid #3b99e0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: white;
+}
+
+th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 15px;
+    color: #0d6efd;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: #000;
+    /* border-bottom: solid 1px #000; */
+}
+
+
+/* demo styles */
+
+
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700); */
+
+body {
+    background-size: 400% 400%;
+    background-image: linear-gradient( -45deg, #ff2ced, #2cccff, #20e3b2, #11d4f8, #c50dce, #4158d0, #ff2ced);
+    animation: gradient 20s ease alternate infinite;
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+    -webkit-animation: gradient 20s ease alternate infinite;
+}
+
+section {
+    margin: 100px 20px 10px;
+}
+
+.input_list:hover {
+    box-shadow: 5px 5px 5px rgb(117, 114, 114);
+}
+
+.input_link {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

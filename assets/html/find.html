@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Student</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="../css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/find.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">
+                <span class="group-name">NHÓM 8</span>
+            </a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/members">THÀNH VIÊN</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/">NHẬP THÔNG TIN</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/table">XEM DANH SÁCH</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/find">TRA CỨU</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <h1>NHẬP THÔNG TIN CẦN TÌM</h1>
+        <form id="form" action="">
+            <div class="mb-3">
+                <label class="form-label" for="namesv">Tìm tên sinh viên: </label>
+                <input class="form-control item" type="text" id="namesv">
+                <button class="btn btn-primary" type="button" id="button" onclick="save_name()" href="/find">Tìm</button>
+            </div>
+        </form>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>MSSV</th>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Email</th>
+                        <th>Điện thoại</th>
+                        <th>Tỉnh</th>
+                        <th>Xã</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="table_name">
+                    <tr>
+                        <td>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tìm theo tỉnh -->
+        <form id="form" action="">
+            <div class="mb-3">
+                <label class="form-label" for="namesv">Tỉnh cần tìm: </label>
+                <input class="form-control item" type="text" id="tinh">
+                <button class="btn btn-primary" type="button" id="button" onclick="save_tinh()" href="/find">Tìm</button>
+            </div>
+        </form>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>MSSV</th>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Email</th>
+                        <th>Điện thoại</th>
+                        <th>Tỉnh</th>
+                        <th>Xã</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="table_tinh">
+                    <tr>
+                        <td>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tìm theo xã -->
+        <form id="form" action="">
+            <div class="mb-3">
+                <label class="form-label" for="namesv">Xã cần tìm: </label>
+                <input class="form-control item" type="text" id="xa">
+                <button class="btn btn-primary" type="button" id="button" onclick="save_xa()" href="/find">Tìm</button>
+            </div>
+        </form>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>MSSV</th>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Email</th>
+                        <th>Điện thoại</th>
+                        <th>Tỉnh</th>
+                        <th>Xã</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="table_xa">
+                    <tr>
+                        <td>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="../js/find.js"></script>
+</body>
+
+</html>
